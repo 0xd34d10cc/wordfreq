@@ -1,0 +1,15 @@
+[package]
+name = "wordfreq"
+version = "0.1.0"
+authors = ["0xd34d10cc <0xd34d10cc@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+memmap = "0.7.0"
+
+[profile.release]
+lto = "fat"
+opt-level = 3
+codegen-units = 1
+panic = "abort"
+debug = true
